@@ -1,0 +1,83 @@
+:root {
+  --main: black;
+  --border: #FFEBB0;
+  --accent: #C01A27;
+}
+
+@font-face {
+  font-family: 'Valonik';
+  src: url('../fonts/Valonik.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Merchant';
+  src: url('../fonts/Merchant.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TribecaFilled';
+  src: url('../fonts/TribecaFilled.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: var(--accent);
+}
+
+.content {
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.title {
+  font-size: 5vh;
+  font-family: TribecaFilled, sans-serif;
+  color: var(--accent);
+  text-align: center;
+  position: absolute;
+  top: 5vh;
+}
+
+.comment {
+  font-family: Merchant, monospace;
+  font-size: 3vh;
+  color: whitesmoke;
+  text-align: center;
+  position: absolute;
+  bottom: 5vh;
+}
+
+.card, #logo {
+  background-color: var(--main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  perspective: 60vh;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  user-select: none;
+}
+
+.card img {
+  max-height: 70vh;
+  max-width: 75vw;
+  border: 0.75vh ridge var(--border);
+  border-radius: 1vh;
+  transition: all 30ms ease-in;
+}
+
+#logo img {
+  border: none;
+  max-height: 70vh;
+  max-width: 75vw;
+  transition: all 30ms ease-in;
+}
+
